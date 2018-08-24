@@ -17,6 +17,14 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    /*public User getUser(long id) {
+        return userRepository.findOne(id);
+    }*/
+
+    public User addUser(User user) {
+        return userRepository.save(user);
+    }
+
     public User getUser(long id) {
         return userRepository.findOne(id);
     }
