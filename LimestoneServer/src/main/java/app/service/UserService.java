@@ -28,4 +28,8 @@ public class UserService {
     public User getUser(long id) {
         return userRepository.findOne(id);
     }
+
+    public User getUser(String name, String password) {
+        return userRepository.findByNameAndPassword(name, password);
+    }
 }

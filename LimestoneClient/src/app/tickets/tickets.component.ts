@@ -20,6 +20,7 @@ export class TicketsComponent implements OnInit {
     this.getAllTickets();
   }
 
+
   private getAllTickets(): void {
     this.ticketService.getAllTickets()
       .subscribe(

@@ -45,8 +45,17 @@ public class UserController {
     }
 
 
-
-
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(path = "/checkUser", method = RequestMethod.POST)
+    public User checkUser(@RequestBody User user) {
+        user = userService.getUser(user.getName(), user.getPassword());
+        System.out.println(user.getId()+ "idddd");
+        System.out.println(user.getName() + " " + user.getPassword());
+        user = userService.addUser(user);
+        ID = user.getId();
+        System.out.println(ID);
+        return user;
+    }
 
 
 
