@@ -2,11 +2,21 @@
   tickets works!
 </p>
 
-
-
-
-<div>
-  <li *ngFor="let ticket of tickets">
+To do:<div *ngFor="let ticket of tickets">
+  <div *ngIf="ticket.status=='todo'">
     {{ticket.name}}
-  </li>
+    <a href="/ticket/{{ticket.name}}">{{ticket.name}}</a>
+  </div>
+</div>
+
+In progress:<div *ngFor="let ticket of tickets">
+  <div *ngIf="ticket.status=='In progress'">
+    {{ticket.name}}
+  </div>
+</div>
+
+Done:<div *ngFor="let ticket of tickets">
+  <div *ngIf="ticket.status=='Done'">
+    {{ticket.name}}
+  </div>
 </div>

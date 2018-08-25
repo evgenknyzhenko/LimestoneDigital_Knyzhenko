@@ -10,12 +10,14 @@ import {UserService} from "./service/user-service";
 import { TicketsComponent } from './tickets/tickets.component';
 import {SignInComponent} from "./sign-in/sign-in.component";
 import {SignUpComponent} from "./sign-up/sign-up.component";
+import { TicketComponent } from './ticket/ticket.component';
 
 const appRoutes: Routes = [
   {path: 'signIn', component:SignInComponent},
   {path: 'signUp', component:SignUpComponent},
   /*{path: '',component: LoginComponent}*/
-  {path: 'tickets', component:TicketsComponent}
+  {path: 'tickets', component:TicketsComponent},
+  {path: 'ticket/:name', component: TicketComponent}
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     TicketsComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    TicketComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes, {enableTracing: true}),
