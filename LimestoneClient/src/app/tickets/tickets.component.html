@@ -4,8 +4,12 @@
 
 To do:<div *ngFor="let ticket of tickets">
   <div *ngIf="ticket.status=='todo'">
-    {{ticket.name}}
-    <a href="/ticket/{{ticket.name}}">{{ticket.name}}</a>
+
+    <div (click)="onSelect(ticket)">{{ticket.name}}</div>
+<!--
+    <a href="/ticket/{{ticket.name}}" (click)="onSelect(ticket)">{{ticket.name}}</a>
+-->
+
   </div>
 </div>
 
@@ -20,3 +24,7 @@ Done:<div *ngFor="let ticket of tickets">
     {{ticket.name}}
   </div>
 </div>
+
+
+<app-ticket [selectedTicket]="selectedTicket"></app-ticket>
+

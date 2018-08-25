@@ -11,6 +11,7 @@ import {s} from "@angular/core/src/render3";
 })
 export class TicketsComponent implements OnInit {
   public tickets: Array<Ticket> = [];
+  public selectedTicket: Ticket;
 
 
   constructor(private ticketService: TicketService) {
@@ -27,5 +28,9 @@ export class TicketsComponent implements OnInit {
         resp => this.tickets = resp,
         err => console.log('Tickets can not read')
       );
+  }
+
+  public onSelect(ticket: Ticket) {
+    this.selectedTicket = ticket;
   }
 }
