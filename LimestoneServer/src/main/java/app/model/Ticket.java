@@ -61,4 +61,14 @@ public class Ticket {
     public void setUser(User user) {
         this.user = user;
     }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", status='" + status + '\'' +
+                ", user=" + user.getId() +
+                '}';
+    }
 }

@@ -13,4 +13,10 @@ export class TicketService {
       'http://localhost:8080/tickets', {observe: 'body'}
     );
   }
+
+
+  addTicket(ticket: Ticket): Observable<Ticket> {
+    return this.http.post('http://localhost:8080/addTicket', ticket);
+
+  }
 }

@@ -33,4 +33,8 @@ export class TicketsComponent implements OnInit {
   public onSelect(ticket: Ticket) {
     this.selectedTicket = ticket;
   }
+
+  addToDoTicket(): void {
+
+  }
 }

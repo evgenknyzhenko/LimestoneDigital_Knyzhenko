@@ -19,8 +19,6 @@ public class User {
     private List<Ticket> tickets = new ArrayList<>();
 
 
-
-
     public Long getId() {
         return id;
     }

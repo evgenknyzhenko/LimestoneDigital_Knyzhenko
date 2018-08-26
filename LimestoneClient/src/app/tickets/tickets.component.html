@@ -2,24 +2,29 @@
   tickets works!
 </p>
 
-To do:<div *ngFor="let ticket of tickets">
+<a href="/addTicket">Add Ticket</a> <br/>
+To do:
+<div *ngFor="let ticket of tickets">
   <div *ngIf="ticket.status=='todo'">
-
     <div (click)="onSelect(ticket)">{{ticket.name}}</div>
-<!--
-    <a href="/ticket/{{ticket.name}}" (click)="onSelect(ticket)">{{ticket.name}}</a>
--->
-
+    <!--
+        <a href="/ticket/{{ticket.name}}" (click)="onSelect(ticket)">{{ticket.name}}</a>
+    -->
   </div>
 </div>
 
-In progress:<div *ngFor="let ticket of tickets">
+
+
+
+In progress:
+<div *ngFor="let ticket of tickets">
   <div *ngIf="ticket.status=='In progress'">
     {{ticket.name}}
   </div>
 </div>
 
-Done:<div *ngFor="let ticket of tickets">
+Done:
+<div *ngFor="let ticket of tickets">
   <div *ngIf="ticket.status=='Done'">
     {{ticket.name}}
   </div>

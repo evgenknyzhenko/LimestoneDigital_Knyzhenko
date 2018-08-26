@@ -23,7 +23,7 @@ export class SignUpComponent implements OnInit {
   addUser(): void {
     this.userService.addUser(this.user)
       .subscribe(resp => {
-          this.msg = 'User was created succesfully';
+          this.msg = 'User was created successfully';
           this.user = new User();
         },
         err => {

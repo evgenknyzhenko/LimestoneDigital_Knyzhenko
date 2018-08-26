@@ -1,0 +1,24 @@
+<p>
+  add-ticket works!
+</p>
+
+Name: <input [(ngModel)]="ticket.name"><br/>
+Description: <input [(ngModel)]="ticket.description"><br/>
+Status: <input [(ngModel)]="ticket.status">
+
+<!--
+<select name="ticket.status">
+  <option>todo</option>
+  <option>In progress</option>
+  <option>Done</option>
+</select>
+???????????????????????????????
+-->
+
+
+
+<button type="submit" (click)="addTicket()" onclick="location.href='tickets'">Add</button>
+
+
+
+
