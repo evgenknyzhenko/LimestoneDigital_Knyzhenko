@@ -30,6 +30,8 @@ Done:
   </div>
 </div>
 
+<div *ngIf="selectedTicket">
+  <app-ticket [selectedTicket]="selectedTicket"></app-ticket>
 
-<app-ticket [selectedTicket]="selectedTicket"></app-ticket>
+</div>
 

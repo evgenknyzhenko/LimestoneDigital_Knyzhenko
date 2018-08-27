@@ -1,8 +1,11 @@
 <p>
-  ticket details:
+  Ticket details:
 </p>
 
 <div>
   {{selectedTicket.name}}
   {{selectedTicket.description}}
 </div>
+
+<a href="/tickets" (click)="deleteTicket()">Delete ticket</a>
+<button (click)="deleteTicket()">Del</button>

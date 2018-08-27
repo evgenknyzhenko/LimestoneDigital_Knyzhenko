@@ -19,4 +19,11 @@ public class TicketController {
         return ticketServise.addTicket(ticket);
         //return ticket;
     }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(path = "/deleteTicket", method = RequestMethod.POST)
+    public Ticket deleteTicket(@RequestBody Ticket ticket) {
+        System.out.println(ticket);
+        return ticket;
+    }
 }
