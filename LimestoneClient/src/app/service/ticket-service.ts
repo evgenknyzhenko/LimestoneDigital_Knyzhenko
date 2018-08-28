@@ -24,6 +24,6 @@ export class TicketService {
     return this.http.post('http://localhost:8080/deleteTicket', selectedTicket);
   }*/
   deleteTicket(ticket: Ticket): Observable<Ticket> {
-    return this.http.post('http://localhost:8080/deleteUser', ticket);
+    return this.http.post('http://localhost:8080/deleteTicket', ticket);
   }
 }

@@ -16,7 +16,6 @@ import {AddTicketComponent} from './add-ticket/add-ticket.component';
 const appRoutes: Routes = [
   {path: 'signIn', component: SignInComponent},
   {path: 'signUp', component: SignUpComponent},
-  /*{path: '',component: LoginComponent}*/
   {path: 'tickets', component: TicketsComponent},
   {path: 'ticket/:name', component: TicketComponent},
   {path: 'addTicket', component: AddTicketComponent}

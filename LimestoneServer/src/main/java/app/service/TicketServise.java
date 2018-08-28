@@ -4,4 +4,6 @@ import app.model.Ticket;
 
 public interface TicketServise {
     Ticket addTicket(Ticket ticket);
+
+    void deleteTicket(Ticket ticket);
 }

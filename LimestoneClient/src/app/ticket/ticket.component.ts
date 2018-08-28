@@ -9,31 +9,26 @@ import {TicketService} from "../service/ticket-service";
 })
 export class TicketComponent implements OnInit {
 
-  private ticket;
   private msg;
 
-  ///????????
   @Input() selectedTicket: Ticket;
   constructor(private ticketService: TicketService) { }
 
   ngOnInit() {
-    this.ticket = new Ticket();
-    this.ticket = this.selectedTicket;
     this.msg = '';
-    this.deleteTicket();
   }
 
 
   deleteTicket() {
-    this.ticketService.deleteTicket(this.ticket)
+    this.ticketService.deleteTicket(this.selectedTicket)
       .subscribe(
         resp => {
           this.msg = 'Ticket was deleted';
-          this.ticket = new Ticket();
+          console.log('sdefefe');
         },
-          err => {
-            this.msg = 'Ticket was not delete';
-          }
+        err => {
+          this.msg = 'Ticket was not delete';
+        }
 
       );
 
