@@ -8,7 +8,6 @@ import {UserService} from "../service/user-service";
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-
   public user;
   public msg;
 
@@ -18,7 +17,6 @@ export class SignUpComponent implements OnInit {
     this.user = new User();
     this.msg = '';
   }
-
 
   addUser(): void {
     this.userService.addUser(this.user)

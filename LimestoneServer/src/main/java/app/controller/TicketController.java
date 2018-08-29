@@ -7,10 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TicketController {
-
     @Autowired
     private TicketServise ticketServise;
-
     @Autowired
     private UserController userController;
 
@@ -19,7 +17,6 @@ public class TicketController {
     public Ticket addTicket(@RequestBody Ticket ticket) {
         ticket.setUser(userController.getCurrentUser());
         return ticketServise.addTicket(ticket);
-        //return ticket;
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
@@ -27,6 +24,14 @@ public class TicketController {
     public void deleteTicket(@RequestBody Ticket ticket) {
         ticket.setUser(userController.getCurrentUser());
         ticketServise.deleteTicket(ticket);
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(path = "/editTicket", method = RequestMethod.POST)
+    public Ticket editTicket(@RequestBody Ticket ticket) {
+        System.out.println(ticket);
+        ticket.setUser(userController.getCurrentUser());
+        return ticketServise.editTicket(ticket);
     }
 
 

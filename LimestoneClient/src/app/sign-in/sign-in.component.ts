@@ -8,7 +8,6 @@ import {UserService} from "../service/user-service";
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
-
   public user = new User();
   public msg = '';
 

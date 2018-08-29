@@ -14,16 +14,16 @@ export class TicketService {
     );
   }
 
-
   addTicket(ticket: Ticket): Observable<Ticket> {
     return this.http.post('http://localhost:8080/addTicket', ticket);
 
   }
 
-  /*deleteTicket(selectedTicket: Ticket): Observable<Ticket> {
-    return this.http.post('http://localhost:8080/deleteTicket', selectedTicket);
-  }*/
   deleteTicket(ticket: Ticket): Observable<Ticket> {
     return this.http.post('http://localhost:8080/deleteTicket', ticket);
+  }
+
+  editTicket(selectedTicket: Ticket): Observable<Ticket> {
+    return this.http.post('http://localhost:8080/editTicket',selectedTicket);
   }
 }

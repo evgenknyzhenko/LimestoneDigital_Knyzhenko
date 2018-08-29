@@ -10,7 +10,6 @@ export class UserService {
 
   addUser(user: User): Observable<User> {
     return this.http.post('http://localhost:8080/addUser', user);
-
   }
 
   checkUser(user: User): Observable<User>{

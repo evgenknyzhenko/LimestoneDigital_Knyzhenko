@@ -1,37 +1,25 @@
-<p>
-  tickets works!
-</p>
-
 <a href="/addTicket">Add Ticket</a> <br/>
 To do:
 <div *ngFor="let ticket of tickets">
   <div *ngIf="ticket.status=='todo'">
     <div (click)="onSelect(ticket)">{{ticket.name}}</div>
-    <!--
-        <a href="/ticket/{{ticket.name}}" (click)="onSelect(ticket)">{{ticket.name}}</a>
-    -->
   </div>
 </div>
-
-
-
 
 In progress:
 <div *ngFor="let ticket of tickets">
   <div *ngIf="ticket.status=='In progress'">
-    {{ticket.name}}
+    <div (click)="onSelect(ticket)">{{ticket.name}}</div>
   </div>
 </div>
 
 Done:
 <div *ngFor="let ticket of tickets">
   <div *ngIf="ticket.status=='Done'">
-    {{ticket.name}}
+    <div (click)="onSelect(ticket)">{{ticket.name}}</div>
   </div>
 </div>
 
 <div *ngIf="selectedTicket">
   <app-ticket [selectedTicket]="selectedTicket"></app-ticket>
-
 </div>
-

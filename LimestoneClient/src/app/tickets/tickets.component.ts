@@ -1,8 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Ticket} from "../model/ticket";
 import {TicketService} from "../service/ticket-service";
-import {User} from "../model/user";
-import {s} from "@angular/core/src/render3";
 
 @Component({
   selector: 'app-tickets',
@@ -13,14 +11,12 @@ export class TicketsComponent implements OnInit {
   public tickets: Array<Ticket> = [];
   public selectedTicket: Ticket;
 
-
   constructor(private ticketService: TicketService) {
   }
 
   ngOnInit() {
     this.getAllTickets();
   }
-
 
   private getAllTickets(): void {
     this.ticketService.getAllTickets()

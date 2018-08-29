@@ -19,4 +19,11 @@ public class TicketServiseImpl implements TicketServise {
     public void deleteTicket(Ticket ticket) {
         ticketRepository.delete(ticket);
     }
+
+    @Override
+    public Ticket editTicket(Ticket ticket) {
+        Ticket editedTicket = ticketRepository.saveAndFlush(ticket);
+        System.out.println(editedTicket);
+        return editedTicket;
+    }
 }

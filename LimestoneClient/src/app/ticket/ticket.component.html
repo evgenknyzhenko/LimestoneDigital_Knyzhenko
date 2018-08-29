@@ -5,6 +5,15 @@
 <div>
   {{selectedTicket.name}}
   {{selectedTicket.description}}
+  {{selectedTicket.status}}
 </div>
 
-<a href="/tickets" (click)="deleteTicket()">Delete ticket</a>
+<button (click)="deleteTicket()" onclick="location.href='/tickets'">Delete ticket</button>
+<button (click)="onSelectEditTicket()">Edit ticket</button>
+
+<div *ngIf="ticketForEdit">
+  Name: <input [(ngModel)]="ticketForEdit.name"><br/>
+  Description: <input [(ngModel)]="ticketForEdit.description"><br/>
+  Status: <input [(ngModel)]="ticketForEdit.status">
+  <button type="submit" (click)="editTicket()" onclick="location.href='/tickets'">Edit</button>
+</div>

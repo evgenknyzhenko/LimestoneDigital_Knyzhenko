@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 public class UserController {
     private User currentUser;
-
     @Autowired
     private UserService userService;
 
@@ -20,7 +19,6 @@ public class UserController {
     public User addUser(@RequestBody User user) {
         user = userService.addUser(user);
         currentUser = user;
-        System.out.println(user.getName());
         return user;
     }
 
@@ -34,8 +32,6 @@ public class UserController {
     @RequestMapping(path = "/checkUser", method = RequestMethod.POST)
     public User checkUser(@RequestBody User user) {
         user = userService.getUser(user.getName(), user.getPassword());
-        //user = userService.addUser(user);
-
         currentUser = user;
         return user;
     }
